@@ -1,6 +1,6 @@
 const express = require("express");
 const {connect} = require("./src/utils/database");
-const comidaRoutes = require("./src/api/routes/comida.routes")
+const comidaRoutes = require("./src/api/routes/comida.routes");
 
 const PORT = 5000;
 const app = express();

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const DB_URL = "mongodb+srv://root:root@cluster0.imov6up.mongodb.net/prueba?retryWrites=true&w=majority";
+const DB_URL = "";
 
 const connect = async() => {
     try {

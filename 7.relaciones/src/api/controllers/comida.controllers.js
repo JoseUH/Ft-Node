@@ -12,7 +12,7 @@ const getComidasById = async (req, res) => {
   try {
     const { id } = req.params;
     const comida = await Comida.findById(id);
-   
+
     if (!comida) {
       console.log("llegue");
       return res.status(404).json({ message: "no tenemos comidas con ese id" });
@@ -44,14 +44,20 @@ const putComida = async (req, res) => {
     return res.status(500).json(error);
   }
 };
-const deleteComida = async(req,res) => {
-    try {
-        const {id} = req.params;
-        const deleteComida = await Comida.findByIdAndDelete(id);
-        return res.status(200).json(deleteComida)
-    } catch (error) {
-        return res.status(500).json(error)
-    }
-}
+const deleteComida = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteComida = await Comida.findByIdAndDelete(id);
+    return res.status(200).json(deleteComida);
+  } catch (error) {
+    return res.status(500).json(error);
+  }
+};
 
-module.exports = { getComidas, getComidasById, postComida , putComida, deleteComida};
+module.exports = {
+  getComidas,
+  getComidasById,
+  postComida,
+  putComida,
+  deleteComida,
+};
